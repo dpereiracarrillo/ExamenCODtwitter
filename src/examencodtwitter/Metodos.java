@@ -24,10 +24,10 @@ public class Metodos {
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("VnItYt2EEiPAymGQW01huMuXp")
-                .setOAuthConsumerSecret("aE5Dygm2VbzfH9BokMGAvTEPhfIrBPOJX2nRvQFKId1t6rhLAa")
-                .setOAuthAccessToken("779025319-KBKqeCiqBEXh0CqsvP8xL3wsSdmBWXEl2YGEqzQ4")
-                .setOAuthAccessTokenSecret("WJIrTUkKi2LbXMYsax0mRDcxz5PC1olzXKyVzAGTnZVfJ");
+                .setOAuthConsumerKey("XXXXXXXXXXXXXXXXXXXXXXXX")
+                .setOAuthConsumerSecret("XXXXXXXXXXXXXXXXXXXXXXXX")
+                .setOAuthAccessToken("XXXXXXXXXXXXXXXXXXXXXXXX")
+                .setOAuthAccessTokenSecret("XXXXXXXXXXXXXXXXXXXXXXXX");
 
         twitter = new TwitterFactory(cb.build()).getInstance();
 
