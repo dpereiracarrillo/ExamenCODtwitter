@@ -1,6 +1,8 @@
 package examencodtwitter;
 
 import java.util.List;
+import twitter4j.Query;
+import twitter4j.QueryResult;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -35,6 +37,15 @@ public class Metodos {
          for (Status status : statuses) {
              System.out.println(status.getUser().getName() + ":"
                      + status.getText());
+         }
+
+     }
+      public void buscarTrending(String busqueda) throws TwitterException {
+
+         Query query = new Query(busqueda);
+         QueryResult result = twitter.search(query);
+         for (Status status : result.getTweets()) {
+             System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
          }
 
      }
