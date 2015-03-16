@@ -16,9 +16,10 @@ import twitter4j.conf.ConfigurationBuilder;
 public class Metodos {
 
     Twitter twitter;
-    
-    /* El constructor da acceso a la clase */
 
+    /**
+     * El constructor da acceso a la clase
+     */
     public Metodos() {
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
@@ -31,9 +32,11 @@ public class Metodos {
         twitter = new TwitterFactory(cb.build()).getInstance();
 
     }
-    
-    /*Método para ver el TimeLine de tu Twitter */
 
+    /**
+     * Método para ver el TimeLine de tu Twitter, te enseña los útltimos twits
+     * publicados por la gente a la que sigues
+     */
     public void verTL() throws TwitterException {
 
         List<Status> statuses = twitter.getHomeTimeline();
@@ -44,9 +47,11 @@ public class Metodos {
         }
 
     }
-    
-    /*Método para buscar una string */
 
+    /**
+     * Método para buscar una string, le introduces un texto y buscas los twits
+     * que incluyen ese texto
+     */
     public void buscarTrending(String busqueda) throws TwitterException {
 
         Query query = new Query(busqueda);
@@ -56,9 +61,11 @@ public class Metodos {
         }
 
     }
-    
-    /*Metodo para twitear */
 
+    /**
+     * Metodo para twitear, puedes escibir lo que quieras para que después sea
+     * publicado
+     */
     public void tweetear(String tweet) throws TwitterException {
 
         Status status = twitter.updateStatus(tweet);
